@@ -32,3 +32,31 @@ section {
 .lanscape {
     padding-bottom: 60%;
 }
+
+/* Nav Dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+   }
+   .dropdown-title {
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+   }
+   .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    padding: 0.5rem;
+    display: none;
+    background-color: white;
+    z-index: 2;
+    text-align: left;
+    min-width: 10rem;
+   }
+   .dropdown:hover .dropdown-content {
+    display: block;
+   }
+   .dropdown-content a {
+    display: block;
+   }
