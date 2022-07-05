@@ -1,15 +1,18 @@
 ---
 layout: default
 title: Homepage
+category: deserts
 ---
 
 <section>
 
     <h1>Welcome to your homepage!</h1>
 
-    {% for post in site.posts %}
+    {% assign relevant-recipes = site.recipes | where_exp:"recipe", "recipe.categories contains page.category" %}
 
-    <a href="{{post.url}}"> {{post.title}} </a>
+    {% for recipe in relevant-recipes %}
+
+    <a href="{{recipe.url}}"> {{recipe.title}} </a>
 
     {% endfor %}
 
